@@ -24,12 +24,13 @@ class AlbumsContainer extends Component {
   getAlbums = () => {
     client.setToken('D6W69PRgCoDKgHZGJmRUNA');
     client.getAlbums(ALBUM_IDS)
-      .then((albums) => (
+      .then((albums) => {
         this.setState({
           fetched: true,
-          albums: albums,
+          albums,
         })
-       ));
+      });
+      
   };
 
   render() {
