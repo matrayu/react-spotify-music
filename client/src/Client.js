@@ -44,6 +44,7 @@ class Client {
 
   setToken(token) {
     this.token = token;
+    console.log(this.useLocalStorage)
 
     if (this.useLocalStorage) {
       localStorage.setItem(LOCAL_STORAGE_KEY, token);
